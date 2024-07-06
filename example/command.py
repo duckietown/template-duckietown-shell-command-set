@@ -1,4 +1,4 @@
-from dt_shell import DTCommandAbs, DTShell
+from dt_shell import DTCommandAbs, DTShell, dtslogger
 
 
 class DTCommand(DTCommandAbs):
@@ -15,7 +15,7 @@ class DTCommand(DTCommandAbs):
         #   shell   is the instance of DTShell hosting this command
         #   args    is a list of arguments passed to the command
         #
-        print("This is an example command. Discard it after you instantiate your own command set")
+        dtslogger.info("This is an example command. Discard it after you instantiate your own command set.")
 
     @staticmethod
     def complete(shell, word, line):
